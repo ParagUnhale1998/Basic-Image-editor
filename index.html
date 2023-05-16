@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <link rel="stylesheet" href="/style.css">
+    
+</head>
+
+<body>
+    <h1>Image editor</h1>
+    <div class="container">
+        <div class="result">
+            <figure class="image-container">
+             <img id="chosen-image" src="#">
+            </figure>
+            <div class="btn-container">
+            <input type="file" id="upload-buttons" accept="image.*">
+            <label for="upload-buttons">Choose an image</label>
+            <button id="download-button">Download Image</button>
+         </div>
+         </div> 
+        <div class="editor">
+            <div class="filter">
+                <label for="blur">blur</label>
+                <input type="range" name="" min="0" max="5" value="0" step="0.1" id="blur">
+            </div>
+            <div class="filter">
+                <label for="contrast">contrast</label>
+                <input type="range" name="" min="0" max="200" value="100" id="contrast">
+            </div>
+            <div class="filter">
+                <label for="hue-rotate">hue-rotate</label>
+                <input type="range" name="" min="0" max="360" value="0" id="hue-rotate">
+            </div>
+            <div class="filter">
+                <label for="sepia">sepia</label>
+                <input type="range" name="" min="0" max="200" value="100" id="sepia">
+            </div>
+            <div class="filter">
+                <label for="brightness">brightness</label>
+                <input type="range" name="" min="0" max="200" value="100" id="brightness">
+            </div>
+            <div class="filter">
+                <label for="saturate">saturate</label>
+                <input type="range" name="" min="0" max="200" value="100" id="saturate">
+            </div>
+            <div class="flip-buttons">
+                <div class="flip-options">
+                    <input type="radio" name="flip" id="no-flip" checked>
+                    <label for="no-flip">no flip</label>
+                </div>
+                <div class="flip-options">
+                    <input type="radio" name="flip" id="flip-x" >
+                    <label for="flip-x">flip horizontal</label>
+                </div>
+                <div class="flip-options">
+                    <input type="radio" name="flip" id="flip-y" >
+                    <label for="flip-y">Flip vertical</label>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="/index.js"></script>
+</body>
+
+</html>
