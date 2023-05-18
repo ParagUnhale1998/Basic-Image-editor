@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+body{
+    background-color: #2b2b2b;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+h1{
+    text-align: center;
+    margin-top: 1%;
+    text-transform: uppercase;
+    color: white;
+}
+.container{
+    text-transform: capitalize;
+    width: 85vw;
+    min-height: 50vmin;
+    padding: 50px 20px ;
+    background-color: #404040;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    gap: 20px;
+    box-shadow: 5px 5px 10px rgb(8, 8, 8)
+}
+.editor{
+    
+    min-height: 25vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    
+}
+.editor label {
+    font-size: 2.8vmin;
+    color: #1b1b1b;
+    font-weight: 550;
+    color: white;
+}
+.editor input[type="range"]{
+    display: block;
+    width: 100%;
+    position: relative;
+    margin-top: 5px;
+    
+}
+.flip-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    gap: 10px;
+
+}
+.flip-buttons .flip-options{
+    margin-top: 10px; 
+}
+.result{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+}
+.image-container{
+    display: none;
+    
+    width: auto;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.646);
+}
+.result img {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+input[type=file]{
+    display: none;
+}
+.btn-container{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.result label , button{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 220px;
+    border: none;
+    background-color: #025bee;
+    text-align: center;
+    color: #fff;
+    padding: 16px 0;
+    border-radius: 5px;
+    font-size: 2.8vmin;
+    font-weight: 600;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.646);
+    cursor: pointer;
+}
+.result button{
+    display: none;
+}
+.result label:hover{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.931);
+}
+.sticky {
+    position: sticky;
+    top: 0;
+  }
+@media (max-width:620px) {
+    
+    .container{
+        height: 120vh;
+        width: 95vw;
+        top: 66%;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+        gap: 10px;
+    }
+    .editor{
+        
+        grid-row: 2;
+    }
+    .flip-buttons{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .flip-buttons .flip-options{
+        margin-top: 0;
+    }
+    
+}
